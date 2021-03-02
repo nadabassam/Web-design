@@ -1,0 +1,150 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    /* 1. header style */
+
+    .header {
+        background: #f2f2f2;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+
+    }
+
+    .header ul li {
+        list-style: none;
+        display: inline;
+        margin: 0 15px;
+
+    }
+
+    .header ul li a {
+        text-decoration: none;
+        color: #42455a;
+        font-weight: 600px;
+    }
+
+
+    /* 2. Content Section */
+    .Content,
+    .workFields {
+        background: #fff;
+    }
+
+    .Content-item1 {
+        width: 50%;
+        float: left;
+        padding: 60px 50px;
+    }
+
+
+    .workFields-item1 {
+        width: 40%;
+        float: left;
+        padding: 60px 50px;
+    }
+
+    .Content-item2 {
+        width: 32%;
+        float: left;
+        padding: 300px 20px 30px 20px;
+    }
+
+    .workFields-item2 {
+        width: 33%;
+        float: left;
+        padding: 95px 10px 30px 20px;
+
+    }
+
+    a.content-title {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 60px;
+    }
+
+    .content-title,
+    .workFields-title {
+        font-size: 43px;
+        width: 640px;
+        color: #F24976;
+        font-weight: bold;
+    }
+
+    .workFields-title {
+        padding-bottom: 2px;
+    }
+
+    .header ul li a:hover {
+        padding: 20px;
+        color: #F24976;
+    }
+
+    .content-title:hover,
+    .Admission-title:hover,
+    .workFields-title:hover,
+    .Objectives-title:hover {
+        color: #42455a;
+
+    }
+
+    .Content-item-desc,
+    .workFields-item-desc {
+        padding-right: 20px;
+        color: #42455a;
+        line-height: 1.5;
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+
+
+    .Content-item-desc {
+        padding-top: 30px;
+    }
+
+    .workFields-item-desc {
+        padding-top: 5px;
+        margin-bottom: 18px;
+    }
+
+    .Content-item-img img,
+    .workFields-item-img img {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    /* 3. Admission Style */
+    .Admission,
+    .Objectives {
+        background: #f2f2f2;
+        padding: 60px 182px;
+    }
+
+
+    .Admission-title,
+    .workFields-title,
+    .Objectives-title {
+        font-size: 43px;
+        color: #F24976;
+        padding-bottom: 15px;
+    }
+
+    .Admission-desc ul li,
+    .workFields-item2 li,
+    .Objectives-desc li {
+        padding: 10px;
+        list-style: circle;
+        margin: 5px;
+    }

@@ -1,0 +1,403 @@
+/*
+
+Table Contents 
+
+1. Common Styles
+2. General Styles
+3. Sections
+     3-0 Header Section
+     3-1 Home Section
+     3-2 About Section
+     3-3 Education Section
+     3-4 courses Section
+     3-5 PersonalSkills Section
+
+*/
+
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.hover-opacity {
+    transition: opacity 0.5s;
+}
+
+
+/* ltr & tb effects */
+.ltr-effect,
+.tb-effect {
+    position: relative;
+}
+
+.ltr-effect::after,
+.tb-effect::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+
+/* left to right effect */
+.ltr-effect::after {
+    width: 0;
+    transition: width 0.5s;
+
+}
+
+.ltr-effect:hover::after {
+    width: 100%;
+}
+
+
+/* top to bottom effect */
+.tb-effect::after {
+    height: 0;
+    transition: height 0.5s;
+
+}
+
+.tb-effect:hover::after {
+    height: 100%;
+}
+
+
+/* 2. General css style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* To solve float problem */
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #6195ff;
+    margin: 0 auto 70px auto;
+
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+
+
+/* 3. Sections */
+/* 3-0 Header Section  */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-content {
+    overflow: hidden;
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav > li {
+    display: inline-block;
+    text-align: right;
+}
+
+.header .nav > li > a {
+    color: #fff;
+    padding: 30px 10px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.header .nav > li > a::after,
+.header .nav > li > a.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #6195ff;
+    transition: width 0.5s;
+    margin-top: 2px;
+}
+
+.header .nav > li > a.active::after {
+    width: 100%;
+}
+
+.header .nav > li > a::after {
+    width: 0;
+}
+
+.header .nav > li > a:hover::after {
+    width: 100%;
+}
+
+
+
+/* 3-1 Home Section */
+.home {
+    height: 100vh;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.home-content {
+    position: absolute;
+    width: 65%;
+    /* hero image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home .title {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.home-desc {
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+
+
+/* 3-2 About Section */
+.about-content {
+    overflow: hidden;
+}
+
+.about-content ul li i.icon {
+    color: #6195ff;
+    padding: 10px 5px;
+}
+
+
+
+/* 3-3 Education Section */
+.education {
+    background: #f2f2f2;
+}
+
+.education-content {
+    overflow: hidden;
+}
+
+.education-item {
+    width: 50%;
+    float: left;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 20px;
+}
+
+.education-item img {
+    width: 100%;
+}
+
+.education-item.mg {
+    margin: 0 5%;
+}
+
+.education-item ul.mg {
+    margin-top: 100px;
+}
+
+.education-item ul li {
+    padding: 10px;
+}
+
+
+/* 3-4 courses Section */
+.courses-content {
+    overflow: hidden;
+}
+
+.courses-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+    padding: 30px 15px 30px 70px;
+    position: relative;
+}
+
+.courses-item.mg {
+    margin: 0 5%;
+}
+
+.courses-item .icon {
+    position: absolute;
+    left: 15px;
+    top: 35px;
+    color: #6195ff;
+}
+
+.courses-item-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: color 0.5s;
+}
+
+.courses-item-desc {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #899;
+}
+
+.courses-item:hover .courses-item-title {
+    color: #fff;
+}
+
+
+/* 3-5 PersonalSkills Section */
+.PersonalSkills {
+    background: #f2f2f2;
+}
+
+.PersonalSkills-item {
+    width: 50%;
+    float: left;
+}
+
+.PersonalSkills-item .section-header {
+    text-align: left;
+}
+
+.PersonalSkills-item .section-header .line {
+    margin: 0 0 40px 0;
+}
+
+.PersonalSkills-list {
+    list-style: none;
+}
+
+.PersonalSkills-list li i {
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.PersonalSkills-list li {
+    color: #000;
+}
+
+
+.PersonalSkills-list li {
+    margin-bottom: 10px;
+    color: #899;
+}
+
+.PersonalSkills-item-img img {
+    width: 100%;
+}
+
+.PersonalSkills-bollets {
+    list-style: none;
+    text-align: center;
+}
+
+.PersonalSkills-bollets li {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: #e8e8e8;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.PersonalSkills-bollets li.active {
+    background: #6195ff;
+}
+
+.PersonalSkills-bollets li:hover {
+    background: #6195ff;
+
+}
